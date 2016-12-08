@@ -35,7 +35,7 @@ public class CounselorChatbot
      */
     public void main()
     {
-        Scanner user_input = new Scanner( System.in );
+        Scanner user_input = new Scanner( System.in );//Line implements requirements for 2a
         System.out.println("Hello, How can I help you?");
         System.out.println("For help with classes, type in \"classes\"");
         System.out.println("For help with a transcript, type in \"transcript\"");
@@ -60,7 +60,7 @@ public class CounselorChatbot
             System.out.println("Close me now!"); 
             System.exit(1);
         }
-        else if (utility.equals("joke")) {
+        else if (utility.equals("joke")) {//implements requirements for i
             System.out.println("I would give you one, but your life is pretty much one");
         }
         
@@ -68,15 +68,15 @@ public class CounselorChatbot
     public void Classhelp()
     {
         ArrayList<String> messages = new ArrayList<String>(10);
-        Scanner user_input = new Scanner( System.in );
+        Scanner user_input = new Scanner( System.in );//Lines 72-76 implements Requirements for 2b
         System.out.println("Recount all of your classes"); 
-        System.out.println("When done, just type in \"done\"");
+        System.out.println("When done, just type in \"done\"");//implements requirements for ii
         String schoolwork = user_input.next(); 
         if (schoolwork.equals("done")) { 
             System.out.println("Ok, great!");
         }
         else {
-            messages.add(schoolwork);
+            messages.add(schoolwork);//Lines 82-93 implements requirements for 2a
             Classhelp();
         }
         System.out.println("Here is what I got");
@@ -96,7 +96,7 @@ public class CounselorChatbot
             System.out.println("Great! If your teacher gave you any tips to follow, use them.");
             System.out.println("Additionally, if you have any other late work, get it done!.");
         }
-        System.out.println("After you have turned in all your stuff lets see what you can do to improve your study habits");
+        System.out.println("After you have turned in all your stuff lets see what you can do to improve your study habits");// Implements requirements for 2a
         System.out.println("Do you have a planner.");
         String planner = user_input.next();
         if (planner.equals("no")) {
@@ -106,7 +106,7 @@ public class CounselorChatbot
             System.out.println("Make sure you use it on a regular basis");
         }
         System.out.println("In your planner write down all your homework and test dates every night look at your planner and see what you can do.");
-        System.out.println("Lets also get you a tutor to help you. Are you free after school, before school, or at lunch?"); 
+        System.out.println("Lets also get you a tutor to help you. Are you free after school, before school, or at lunch?"); //implements requirements for iii
         System.out.println("What is your lowest class grade?");
         String courses = user_input.next();
         if (courses.equals("science")) {
@@ -126,7 +126,7 @@ public class CounselorChatbot
                 
             }
         } 
-        
+        //line 130-143 indicate requirements for 3
         else if (courses.equals("math")) {
             System.out.println("What kind of math");
             String math = user_input.next();
@@ -173,7 +173,7 @@ public class CounselorChatbot
     public void Transcripthelp()
     {
         Scanner user_input = new Scanner( System.in );
-        System.out.println("Great I am glad to hear that your grades got you into a great college.");
+        System.out.println("Great I am glad to hear that your grades got you into a great college.");//lines 177-182 Implements requirements for 2a
         System.out.println("I would be glad to send your transcript to your school");
         System.out.print("What is the school that you are going to?");
         String college_name = user_input.next();
@@ -200,7 +200,7 @@ public class CounselorChatbot
        System.out.println("So what do you plan to do to keep them up.");
        String grade_val = user_input.next();
        System.out.println("Ok that sounds great is there anything else you can do, because you are at the board line in some classes");
-       System.out.println("So here something you can do; Contact your teacher ask if there is any extra credit opportunity and if there is make sure you do it to secure your grade.");
+       System.out.println("So here something you can do; Contact your teacher ask if there is any extra credit opportunity and if there is make sure you do it to secure your grade.");//implements requirements for iv
        System.out.println("Great hope to see you soon!");
        main();
     }
